@@ -14,7 +14,7 @@
   }
 
   ::selection {
-    background-color: rgba(14, 165, 233, 0.3);
+    background-color: rgba(235, 184, 16, 0.3);
   }
 }
 
@@ -122,10 +122,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 0 20px rgba(235, 184, 16, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(14, 165, 233, 0.5);
+    box-shadow: 0 0 40px rgba(235, 184, 16, 0.5);
   }
 }
 

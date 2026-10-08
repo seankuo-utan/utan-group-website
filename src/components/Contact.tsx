@@ -82,22 +82,22 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-[#0F2942] overflow-hidden">
+    <section id="contact" className="relative py-24 lg:py-32 bg-[#0a1e35] overflow-hidden">
       {/* Background accents */}
-      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-      <div className="absolute -top-40 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-      <div className="absolute -bottom-40 left-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#EBB810]/30 to-transparent" />
+      <div className="absolute -top-40 right-0 w-96 h-96 bg-[#EBB810]/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-40 left-0 w-96 h-96 bg-[#1D549F]/8 rounded-full blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-            <span className="text-sm text-cyan-300 font-medium tracking-wide">聯繫我們</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EBB810]/10 border border-[#EBB810]/20 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#EBB810] animate-pulse" />
+            <span className="text-sm text-[#EBB810] font-medium tracking-wide">聯繫我們</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance">
             立即諮詢，
-            <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#EBB810] to-[#1D549F] bg-clip-text text-transparent">
               開啟您的物流方案
             </span>
           </h2>
@@ -110,7 +110,7 @@ export default function Contact() {
           {/* Company Info - 2 cols */}
           <div className="lg:col-span-2">
             <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/[0.07] to-white/[0.02] border border-white/10 p-8 h-full">
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl" />
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#EBB810]/10 rounded-full blur-3xl" />
               <div className="relative">
                 <h3 className="text-xl font-bold text-white mb-2">公司資訊</h3>
                 <p className="text-sm text-gray-500 mb-8">UTAN UNION LIMITED COMPANY</p>
@@ -118,8 +118,8 @@ export default function Contact() {
                 <div className="space-y-6">
                   {COMPANY_INFO.map((info) => (
                     <div key={info.label} className="flex items-start gap-4">
-                      <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-cyan-500/10 border border-cyan-500/15 shrink-0">
-                        <info.icon className="w-5 h-5 text-cyan-400" />
+                      <div className="flex items-center justify-center w-11 h-11 rounded-lg bg-[#EBB810]/10 border border-[#EBB810]/15 shrink-0">
+                        <info.icon className="w-5 h-5 text-[#EBB810]" />
                       </div>
                       <div className="min-w-0">
                         <div className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-1">
@@ -137,7 +137,7 @@ export default function Contact() {
                 <div className="mt-8 pt-8 border-t border-white/5 space-y-3">
                   <a
                     href="tel:+886225178893"
-                    className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold shadow-lg shadow-cyan-500/20 hover:scale-[1.02] transition-transform"
+                    className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#1D549F] to-[#154a8a] text-white text-sm font-semibold shadow-lg shadow-[#1D549F]/20 hover:scale-[1.02] transition-transform"
                   >
                     <Phone className="w-4 h-4" />
                     立即來電
@@ -146,7 +146,7 @@ export default function Contact() {
                     href="mailto:contact@utangroup.com.tw"
                     className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm font-semibold hover:bg-white/10 transition-colors"
                   >
-                    <Mail className="w-4 h-4 text-cyan-400" />
+                    <Mail className="w-4 h-4 text-[#EBB810]" />
                     Email 諮詢
                   </a>
                 </div>
@@ -229,13 +229,13 @@ export default function Contact() {
                         name="service_interest"
                         value={form.service_interest}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all appearance-none cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm focus:border-[#EBB810]/50 focus:ring-2 focus:ring-[#EBB810]/20 outline-none transition-all appearance-none cursor-pointer"
                       >
-                        <option value="" className="bg-[#0F2942]">
+                        <option value="" className="bg-[#0a1e35]">
                           請選擇服務項目
                         </option>
                         {SERVICE_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt} className="bg-[#0F2942]">
+                          <option key={opt} value={opt} className="bg-[#0a1e35]">
                             {opt}
                           </option>
                         ))}
@@ -269,7 +269,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={4}
                       placeholder="請描述您的物流需求或問題..."
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm placeholder-gray-600 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm placeholder-gray-600 focus:border-[#EBB810]/50 focus:ring-2 focus:ring-[#EBB810]/20 outline-none transition-all resize-none"
                     />
                   </div>
 
@@ -285,7 +285,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-base font-semibold shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.01] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-[#EBB810] to-[#d4a508] text-[#0a1e35] text-base font-semibold shadow-xl shadow-[#EBB810]/25 hover:shadow-[#EBB810]/40 hover:scale-[1.01] transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
                     {status === 'submitting' ? (
                       <>
@@ -333,7 +333,7 @@ function Field({ label, name, value, onChange, placeholder, type = 'text', icon:
           onChange={onChange}
           placeholder={placeholder}
           required={required}
-          className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm placeholder-gray-600 focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 outline-none transition-all"
+          className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm placeholder-gray-600 focus:border-[#EBB810]/50 focus:ring-2 focus:ring-[#EBB810]/20 outline-none transition-all"
         />
       </div>
     </div>

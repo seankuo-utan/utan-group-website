@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Anchor, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: '關於我們', href: '#about' },
@@ -23,7 +23,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0F2942]/95 backdrop-blur-lg shadow-2xl shadow-black/20 border-b border-white/5'
+          ? 'bg-[#0a1e35]/95 backdrop-blur-lg shadow-2xl shadow-black/20 border-b border-[#EBB810]/10'
           : 'bg-transparent'
       }`}
     >
@@ -31,20 +31,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group shrink-0">
-            <div className="relative">
-              <div className="absolute inset-0 bg-cyan-500/30 blur-xl rounded-full transition-opacity duration-500 group-hover:opacity-100 opacity-50" />
-              <div className="relative flex items-center justify-center w-11 h-11 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/20">
-                <Anchor className="w-6 h-6 text-white" strokeWidth={2} />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-white font-bold text-lg leading-tight tracking-wide">
-                UTAN GROUP
-              </span>
-              <span className="text-cyan-300/80 text-xs font-medium tracking-wider">
-                裕騰聯合
-              </span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="UTAN GROUP 裕騰聯合"
+              className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -53,10 +44,10 @@ export default function Header() {
               <a
                 key={link.label}
                 href={link.href}
-                className="relative px-4 py-2 text-sm font-medium text-gray-200 hover:text-cyan-300 transition-colors duration-300 group"
+                className="relative px-4 py-2 text-sm font-medium text-gray-200 hover:text-[#EBB810] transition-colors duration-300 group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-3/4 transition-all duration-300" />
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#EBB810] to-[#1D549F] group-hover:w-3/4 transition-all duration-300" />
               </a>
             ))}
           </div>
@@ -65,7 +56,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-r from-[#EBB810] to-[#d4a508] text-[#0a1e35] shadow-lg shadow-[#EBB810]/25 hover:shadow-[#EBB810]/40 hover:scale-105 transition-all duration-300"
             >
               立即諮詢
               <ArrowRight className="w-4 h-4" />
@@ -83,13 +74,13 @@ export default function Header() {
         {/* Mobile Nav */}
         {mobileOpen && (
           <div className="lg:hidden pb-4 animate-fade-in">
-            <div className="flex flex-col gap-1 bg-[#0F2942]/80 backdrop-blur-lg rounded-xl p-3 border border-white/5">
+            <div className="flex flex-col gap-1 bg-[#0a1e35]/90 backdrop-blur-lg rounded-xl p-3 border border-[#EBB810]/10">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="px-4 py-3 text-sm font-medium text-gray-200 hover:text-cyan-300 hover:bg-white/5 rounded-lg transition-all duration-200"
+                  className="px-4 py-3 text-sm font-medium text-gray-200 hover:text-[#EBB810] hover:bg-white/5 rounded-lg transition-all duration-200"
                 >
                   {link.label}
                 </a>
@@ -97,7 +88,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg"
+                className="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-gradient-to-r from-[#EBB810] to-[#d4a508] text-[#0a1e35] shadow-lg"
               >
                 立即諮詢
                 <ArrowRight className="w-4 h-4" />
