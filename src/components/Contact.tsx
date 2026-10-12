@@ -143,7 +143,7 @@ export default function Contact() {
                     立即來電
                   </a>
                   <a
-                    href="mailto:seankuo@utangroup.com.tw"
+                    href="mailto:seankuo@utangroup.com"
                     className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm font-semibold hover:bg-white/10 transition-colors"
                   >
                     <Mail className="w-4 h-4 text-[#EBB810]" />

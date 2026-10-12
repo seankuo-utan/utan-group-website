@@ -96,8 +96,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#EBB810] shrink-0" />
-                <a href="mailto:contact@utangroup.com.tw" className="text-sm text-gray-400 hover:text-[#EBB810] transition-colors">
-                  contact@utangroup.com.tw
+                <a href="mailto:seankuo@utangroup.com" className="text-sm text-gray-400 hover:text-[#EBB810] transition-colors">
+                  seankuo@utangroup.com.tw
                 </a>
               </li>
             </ul>
