@@ -33,8 +33,12 @@ export default function Header() {
           <a href="#" className="flex items-center gap-3 group shrink-0">
             <img
               src="/logo.png"
-              alt="UTAN GROUP 裕騰聯合"
-              className="h-12 w-auto object-contain drop-shadow-lg transition-transform duration-300 group-hover:scale-105"
+              alt="裕騰聯合 UTAN GROUP" 
+  /* 1. h-12 或 h-14：放大 Logo 高度（原本通常是 h-8 或 h-10）
+     2. brightness-125 / contrast-125：提升亮度與對比
+     3. drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)]：加上淡淡的白色光暈發光效果
+  */
+  className="h-12 w-auto object-contain brightness-125 contrast-125 drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)] transition-all"
             />
           </a>
 
