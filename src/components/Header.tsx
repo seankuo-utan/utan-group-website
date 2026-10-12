@@ -35,7 +35,7 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="裕騰聯合 UTAN GROUP" 
-              className="h-10 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           
           </a>
