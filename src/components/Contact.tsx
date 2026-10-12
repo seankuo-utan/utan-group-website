@@ -69,16 +69,45 @@ export default function Contact() {
       message: form.message.trim() || undefined,
     };
 
-    const { error } = await supabase.from('contact_submissions').insert(submission);
+    try {
+      // 1. 同時寫入 Supabase 資料庫備份
+      const { error: supabaseError } = await supabase
+        .from('contact_submissions')
+        .insert(submission);
 
-    if (error) {
+      if (supabaseError) {
+        console.warn('Supabase insert failed:', supabaseError);
+      }
+
+      // 2. 發送至 Formspree 觸發 Email 通知
+      const formspreeRes = await fetch('https://formspree.io/f/xbgdkwdl', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: submission.name,
+          company: submission.company || '未提供',
+          email: submission.email,
+          phone: submission.phone || '未提供',
+          service_interest: submission.service_interest || '未選擇',
+          message: submission.message || '無內容',
+        }),
+      });
+
+      if (formspreeRes.ok) {
+        setStatus('success');
+        setForm(INITIAL_FORM);
+      } else {
+        setStatus('error');
+        setErrorMessage('郵件通知發送失敗，請稍後再試或來電洽詢。');
+      }
+    } catch (err) {
+      console.error('Form submission error:', err);
       setStatus('error');
       setErrorMessage('系統發生錯誤，請稍後再試或來電洽詢。');
-      return;
     }
-
-    setStatus('success');
-    setForm(INITIAL_FORM);
   };
 
   return (
