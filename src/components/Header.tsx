@@ -31,6 +31,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group shrink-0">
+          <div className="p-1.5 rounded-xl bg-white/10 backdrop-blur-sm border border-white/15 flex items-center justify-center">
             <img
               src="/logo.png"
               alt="裕騰聯合 UTAN GROUP" 
@@ -40,6 +41,7 @@ export default function Header() {
   */
   className="h-12 w-auto object-contain brightness-125 contrast-125 drop-shadow-[0_2px_8px_rgba(255,255,255,0.15)] transition-all"
             />
+            </div>
           </a>
 
           {/* Desktop Nav */}
