@@ -31,13 +31,16 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group shrink-0">
-          
-            <img
-              src="/logo.png"
-              alt="裕騰聯合 UTAN GROUP" 
-              className="h-16 w-auto object-contain"
-            />
-          
+            <div className="flex items-center justify-center bg-white/95 rounded-lg px-2 py-1 shadow-md">
+              <img
+                src="/logo.png"
+                alt="裕騰聯合 UTAN GROUP"
+                className="h-12 w-auto object-contain"
+              />
+            </div>
+            <span className="text-lg font-bold tracking-wide text-white hidden sm:inline-block">
+              UTAN GROUP
+            </span>
           </a>
 
           {/* Desktop Nav */}

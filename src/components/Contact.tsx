@@ -71,12 +71,14 @@ export default function Contact() {
 
     try {
       // 1. 同時寫入 Supabase 資料庫備份
-      const { error: supabaseError } = await supabase
-        .from('contact_submissions')
-        .insert(submission);
+      if (supabase) {
+        const { error: supabaseError } = await supabase
+          .from('contact_submissions')
+          .insert(submission);
 
-      if (supabaseError) {
-        console.warn('Supabase insert failed:', supabaseError);
+        if (supabaseError) {
+          console.warn('Supabase insert failed:', supabaseError);
+        }
       }
 
       // 2. 發送至 Formspree 觸發 Email 通知
@@ -171,13 +173,7 @@ export default function Contact() {
                     <Phone className="w-4 h-4" />
                     立即來電
                   </a>
-                  <a
-                    href="mailto:seankuo@utangroup.com"
-                    className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white/5 border border-white/10 text-gray-200 text-sm font-semibold hover:bg-white/10 transition-colors"
-                  >
-                    <Mail className="w-4 h-4 text-[#EBB810]" />
-                    Email 諮詢
-                  </a>
+
                 </div>
               </div>
             </div>
